@@ -1,4 +1,4 @@
-package se.lexicon.[oscar];
+package se.lexicon.oscar;
 
 import static org.junit.Assert.assertTrue;
 
