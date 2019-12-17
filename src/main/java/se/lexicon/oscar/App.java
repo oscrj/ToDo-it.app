@@ -1,9 +1,6 @@
 package se.lexicon.oscar;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import se.lexicon.oscar.model.Person;
-
-import java.sql.SQLOutput;
 
 public class App
 {

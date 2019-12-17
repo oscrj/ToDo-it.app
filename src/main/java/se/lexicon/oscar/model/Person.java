@@ -2,8 +2,7 @@ package se.lexicon.oscar.model;
 
 public class Person{
 
-    final int Id = 0;
-    private int personId;
+    private final int personId;
     private String firesName;
     private String lastName;
 
@@ -19,9 +18,6 @@ public class Person{
         return personId;
     }
 
-    public int getId() {
-        return Id;
-    }
 
     public String getFiresName() {
         return firesName;
