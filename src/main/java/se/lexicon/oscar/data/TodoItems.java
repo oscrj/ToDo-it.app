@@ -26,9 +26,9 @@ public class TodoItems {
     }
 
     public static Todo createDescription(String description){
-        Todo newPerson = new Todo(TodoSequencer.nextTodoId(), description);
-        todoArray = addToTodoArray(todoArray, newPerson);
-        return newPerson;
+        Todo newTodo = new Todo(TodoSequencer.nextTodoId(), description);
+        todoArray = addToTodoArray(todoArray, newTodo);
+        return newTodo;
     }
 
     public static Todo[] addToTodoArray(Todo[] todoArray, Todo description){
