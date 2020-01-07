@@ -2,15 +2,15 @@ package se.lexicon.oscar.data;
 
 public class TodoSequencer {
 
-    private static int personId;
+    private static int todoId;
 
-    public static int nextPersonIdWithNewName(int personId){
-        personId++;
-        return personId;
+    public static int nextTodoId(){
+        todoId++;
+        return todoId;
     }
 
-    public static int resetAgain(int personId){
-        personId = 0;
-        return personId;
+    public static int reset(){
+        todoId = 0;
+        return todoId;
     }
 }

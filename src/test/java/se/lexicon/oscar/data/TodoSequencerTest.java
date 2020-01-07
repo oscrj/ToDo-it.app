@@ -5,21 +5,19 @@ import org.junit.Test;
 
 public class TodoSequencerTest {
 
-    private static int personIdTest;
-
     @Test
-    public void chech_if_personalId_increase_by_one(){
-        TodoSequencer.nextPersonIdWithNewName(personIdTest);
+    public void chech_if_todoId_increase_by_one(){
+        int actual = TodoSequencer.nextTodoId();
         int expected = 1;
 
-        Assert.assertEquals(expected, TodoSequencer.nextPersonIdWithNewName(personIdTest));
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void test_if_personId_is_reset(){
-        TodoSequencer.resetAgain(personIdTest);
+    public void test_if_todoId_is_reset(){
+        int actual = TodoSequencer.reset();
         int expected = 0;
 
-        Assert.assertEquals(expected, TodoSequencer.resetAgain(personIdTest));
+        Assert.assertEquals(expected, actual);
     }
 }

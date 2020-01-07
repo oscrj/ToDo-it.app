@@ -5,21 +5,19 @@ import org.junit.Test;
 
 public class PersonSequencerTest {
 
-    private static int personIdTest;
-
     @Test
     public void chech_if_personalId_increase_by_one(){
-        PersonSequencer.nextPersonId(personIdTest);
+        int actual = PersonSequencer.nextPersonId();
         int expected = 1;
 
-        Assert.assertEquals(expected, PersonSequencer.nextPersonId(personIdTest));
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void test_if_personId_is_reset(){
-        PersonSequencer.reset(personIdTest);
+        int actual = PersonSequencer.reset();
         int expected = 0;
 
-        Assert.assertEquals(expected, PersonSequencer.reset(personIdTest));
+        Assert.assertEquals(expected, actual);
     }
 }

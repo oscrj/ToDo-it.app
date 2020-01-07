@@ -20,11 +20,11 @@ public class PersonTest {
         String expectedName = "John";
         String expectedLastName = "Doe";
 
-        Assert.assertEquals(expectedName, testPerson.getFiresName());
+        Assert.assertEquals(expectedName, testPerson.getFirstName());
         Assert.assertEquals(expectedLastName, testPerson.getLastName());
         Assert.assertTrue(testPerson.getPersonId() > 0);
 
-        Assert.assertEquals("Jane", secondTestPerson.getFiresName());
+        Assert.assertEquals("Jane", secondTestPerson.getFirstName());
         Assert.assertEquals(expectedLastName, secondTestPerson.getLastName());
         Assert.assertTrue(secondTestPerson.getPersonId() > testPerson.getPersonId());
     }

@@ -3,13 +3,13 @@ package se.lexicon.oscar.model;
 public class Person{
 
     private final int personId;
-    private String firesName;
+    private String firstName;
     private String lastName;
 
     //  Constructor
-    public Person(int personId, String firesName, String lastName){
+    public Person(int personId, String firstName, String lastName){
         this.personId = personId;
-        this.firesName = firesName;
+        this.firstName = firstName;
         this.lastName = lastName;
     }
 
@@ -18,13 +18,12 @@ public class Person{
         return personId;
     }
 
-
-    public String getFiresName() {
-        return firesName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFiresName(String firesName) {
-        this.firesName = firesName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
