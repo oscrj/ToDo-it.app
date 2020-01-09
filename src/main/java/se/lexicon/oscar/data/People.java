@@ -17,9 +17,9 @@ public class People {
     }
 
     public static Person findById(int personId){
-        for(int i = 0; i < personArray.length; i++){
-            if(personArray[i].getPersonId() == personId){
-                return personArray[i];
+        for (Person person : personArray) {
+            if (person.getPersonId() == personId) {
+                return person;
             }
         }
         return null;
@@ -42,8 +42,7 @@ public class People {
     }
 
     public static void clear(){
-        Person[] clearArray = new Person[0];
-        personArray = clearArray;
+        personArray = new Person[0];
     }
 
 }

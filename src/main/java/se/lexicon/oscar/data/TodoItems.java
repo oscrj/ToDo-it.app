@@ -1,7 +1,6 @@
 package se.lexicon.oscar.data;
 
 import se.lexicon.oscar.model.Todo;
-
 import java.util.Arrays;
 
 public class TodoItems {
@@ -17,9 +16,9 @@ public class TodoItems {
     }
 
     public static Todo findById(int todoId){
-        for(int i = 0; i < todoArray.length; i++){
-            if(todoArray[i].getTodoId() == todoId){
-                return todoArray[i];
+        for (Todo todo : todoArray) {
+            if (todo.getTodoId() == todoId) {
+                return todo;
             }
         }
         return null;
@@ -42,7 +41,6 @@ public class TodoItems {
     }
 
     public static void clear(){
-        Todo[] clearArray = new Todo[0];
-        todoArray = clearArray;
+        todoArray = new Todo[0];
     }
 }
