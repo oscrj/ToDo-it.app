@@ -1,5 +1,6 @@
 package se.lexicon.oscar.data;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,12 +9,10 @@ import se.lexicon.oscar.model.Todo;
 public class TodoItemsTest {
 
     private Todo toDoListTest;
-    private Todo toDoListTest2;
 
     @Before
     public void setUp(){
-        toDoListTest = TodoItems.createDescription("Walk the dog");
-        toDoListTest2 = TodoItems.createDescription("Brush your teeth");
+        toDoListTest = TodoItems.createTodo("Walk the dog");
     }
 
     @Test
@@ -28,7 +27,7 @@ public class TodoItemsTest {
     @Test
     public void is_todo_added_to_array(){
         int actual = TodoItems.size();
-        int expected = 2;
+        int expected = 1;
 
         Assert.assertEquals(expected, actual);
     }
@@ -36,7 +35,7 @@ public class TodoItemsTest {
     @Test
     public void find_all_todos_on_array(){
         Todo[] test = TodoItems.findAll();
-        int expected = 2;
+        int expected = 1;
 
         Assert.assertEquals(expected, test.length);
     }
@@ -56,5 +55,11 @@ public class TodoItemsTest {
         TodoItems.clear();
 
         Assert.assertEquals(expected, TodoItems.size());
+    }
+
+    @After
+    public void clear_todo_array(){
+        TodoSequencer.reset();
+        TodoItems.clear();
     }
 }

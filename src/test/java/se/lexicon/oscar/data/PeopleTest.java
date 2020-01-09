@@ -1,5 +1,6 @@
 package se.lexicon.oscar.data;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,12 +9,10 @@ import se.lexicon.oscar.model.Person;
 public class PeopleTest {
 
     private Person testPerson;
-    private Person testPerson2;
 
     @Before
     public void setUp(){
         testPerson = People.createPerson("John", "Doe");
-        testPerson2 = People.createPerson("Jane", "Doe");
     }
 
     @Test
@@ -30,7 +29,7 @@ public class PeopleTest {
     @Test
     public void is_person_added_to_array(){
         int actual = People.size();
-        int expected = 2;
+        int expected = 1;
 
         Assert.assertEquals(expected, actual);
     }
@@ -38,7 +37,7 @@ public class PeopleTest {
     @Test
     public void find_all_persons_on_array(){
         Person[] testPersons = People.findAll();
-        int expected = 2;
+        int expected = 1;
 
         Assert.assertEquals(expected, testPersons.length);
     }
@@ -58,5 +57,11 @@ public class PeopleTest {
         People.clear();
 
         Assert.assertEquals(expected, People.size());
+    }
+
+    @After
+    public void clear_people_array(){
+        PersonSequencer.reset();
+        People.clear();
     }
 }

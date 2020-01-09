@@ -9,8 +9,8 @@ public class Person{
     //  Constructor
     public Person(int personId, String firstName, String lastName){
         this.personId = personId;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        setFirstName(firstName);
+        setLastName(lastName);
     }
 
     //  Getters and Setters

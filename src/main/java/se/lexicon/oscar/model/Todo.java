@@ -9,7 +9,8 @@ public class Todo {
 
     public Todo(int todoId, String description) {
         this.todoId = todoId;
-        this.description = description;
+        setDescription(description);
+        setDone(false);
     }
 
     public int getTodoId() {
@@ -24,11 +25,20 @@ public class Todo {
         this.description = description;
     }
 
+    //  done = true.
     public boolean isDone() {
         return done;
     }
 
     public void setDone(boolean done) {
         this.done = done;
+    }
+
+    public Person getAssignee(){
+        return assignee;
+    }
+
+    public void setAssignee(Person assignee){
+        this.assignee = assignee;
     }
 }

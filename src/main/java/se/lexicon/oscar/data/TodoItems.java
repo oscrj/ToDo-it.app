@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class TodoItems {
 
-    private static Todo[] todoArray = new Todo[0];
+    private static Todo [] todoArray = new Todo[0];
 
     public static int size(){
         return todoArray.length;
@@ -25,7 +25,7 @@ public class TodoItems {
         return null;
     }
 
-    public static Todo createDescription(String description){
+    public static Todo createTodo(String description){
         Todo newTodo = new Todo(TodoSequencer.nextTodoId(), description);
         todoArray = addToTodoArray(todoArray, newTodo);
         return newTodo;
